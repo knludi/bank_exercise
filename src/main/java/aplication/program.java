@@ -11,5 +11,7 @@ public class program {
         System.out.println("Enter a deposit value:");
         System.out.println("Updated account data:");
         System.out.println("Enter a withdraw value:");
+        System.out.println("Updated account data:");
+
     }
 }

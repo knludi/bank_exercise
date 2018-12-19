@@ -1,6 +1,8 @@
 package entities;
 
 
+import com.sun.org.apache.bcel.internal.generic.RETURN;
+
 public class account {
 
     private int number;
@@ -38,6 +40,16 @@ public class account {
 
     public void whitdraw (double amount){
         balance -= balance + amount + 5;
+
+    }
+
+    public String toString(){
+        return  "Account"
+                + number
+                + ", Holder: "
+                + holder
+                + ", Balance: "
+                + balance;
 
     }
 }
