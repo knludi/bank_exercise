@@ -10,7 +10,7 @@ public class Account {
     private double balance;
 
 
-    Account(int number, String holder, double initialDeposit){
+    public Account(int number, String holder, double initialDeposit){
         this.number = number;
         this.holder = holder;
         deposit(initialDeposit);
