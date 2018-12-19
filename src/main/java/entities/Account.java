@@ -3,14 +3,14 @@ package entities;
 
 import com.sun.org.apache.bcel.internal.generic.RETURN;
 
-public class account {
+public class Account {
 
     private int number;
     private String holder;
     private double balance;
 
 
-    account(int number, String holder, double initialDeposit){
+    Account(int number, String holder, double initialDeposit){
         this.number = number;
         this.holder = holder;
         deposit(initialDeposit);
