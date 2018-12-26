@@ -22,7 +22,7 @@ public class program {
         char response = sc.next().charAt(0);
 
         if (response == 'y'){
-            System.out.print("Enter initial deposit value:");
+            System.out.print("Enter initial deposit value: ");
             double initialDeposit = sc.nextDouble();
             sc.nextLine();
             account = new Account(number, holder, initialDeposit);
@@ -31,12 +31,17 @@ public class program {
             account = new Account(number, holder);
 
         }
-
-        System.out.print("Account data:" + account.toString());
-        System.out.print("Enter a deposit value:");
-        System.out.print("Updated Account data:");
-        System.out.print("Enter a withdraw value:");
-        System.out.print("Updated Account data:");
+        System.out.println("Account data:" + account);
+        System.out.print("Enter a deposit value: ");
+        double ammount = sc.nextDouble();
+        sc.nextLine();
+        account.deposit(ammount);
+        System.out.println("Updated Account data:" + account);
+        System.out.print("Enter a withdraw value: ");
+        ammount = sc.nextDouble();
+        sc.nextLine();
+        account.whitdraw(ammount);
+        System.out.println("Updated Account data:" + account);
 
 
         sc.close();
