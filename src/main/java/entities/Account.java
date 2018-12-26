@@ -40,7 +40,8 @@ public class Account {
 
 
     public void deposit (double amount){
-        balance += balance + amount;
+
+        balance =+ balance + amount;
     }
 
     public void whitdraw (double amount){
