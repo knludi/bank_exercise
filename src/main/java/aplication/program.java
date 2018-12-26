@@ -15,20 +15,28 @@ public class program {
         int number = sc.nextInt();
         sc.nextLine();
 
-        System.out.print("\nEnter Account holder: ");
+        System.out.print("Enter Account holder: ");
         String holder = sc.nextLine();
-        sc.nextLine();
 
-        System.out.print("\nIs there na initial deposit (y/n)? ");
-        String deposit = sc.nextLine();
-        sc.nextLine();
+        System.out.print("Is there an initial deposit (y/n)? ");
+        char response = sc.next().charAt(0);
 
-        System.out.print("\nEnter initial deposit value:");
-        System.out.print("\nAccount data:" );
-        System.out.print("\nEnter a deposit value:");
-        System.out.print("\nUpdated Account data:");
-        System.out.print("\nEnter a withdraw value:");
-        System.out.print("\nUpdated Account data:");
+        if (response == 'y'){
+            System.out.print("Enter initial deposit value:");
+            double initialDeposit = sc.nextDouble();
+            sc.nextLine();
+            account = new Account(number, holder, initialDeposit);
+        }
+        else {
+            account = new Account(number, holder);
+
+        }
+
+        System.out.print("Account data:" + account.toString());
+        System.out.print("Enter a deposit value:");
+        System.out.print("Updated Account data:");
+        System.out.print("Enter a withdraw value:");
+        System.out.print("Updated Account data:");
 
 
         sc.close();
